@@ -48,7 +48,6 @@ module.exports = {
           path.join(basePath, 'src'),
           // 重新编译node_modules下的一些库，让他们支持ie8
           path.join(nodeModulesPath, '@sdp.nd'),
-          path.join(nodeModulesPath, 'livereload-js'),
           path.join(nodeModulesPath, 'react-copy-to-clipboard'),
           path.join(nodeModulesPath, 'react-color-standalone'),
           path.join(nodeModulesPath, 'deep-eql'),

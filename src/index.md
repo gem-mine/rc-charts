@@ -18,6 +18,7 @@ title: NDCharts
 ## API
 
 ```jsx
+import NDReactCharts from "@sdp.nd/nd-charts";
 <NDReactCharts
   style={{ height: 500 }}
   chartOptions={{
@@ -40,7 +41,7 @@ title: NDCharts
       }
     ]
   }}
-/>
+/>;
 ```
 
 ### API

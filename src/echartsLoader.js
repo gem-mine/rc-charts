@@ -1,4 +1,4 @@
-import scriptjsLoader from './scriptjsLoader'
+import scriptjsLoader from '@sdp.nd/js-async-loader'
 export default function echartsLoader (versions, modules) {
   versions = versions || '4.0.2'
   modules = modules || ['echarts.min']

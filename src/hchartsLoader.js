@@ -1,4 +1,4 @@
-import scriptjsLoader from './scriptjsLoader'
+import scriptjsLoader from '@sdp.nd/js-async-loader'
 export default function hchartsLoader (versions, modules) {
   versions = versions || '6.0.2'
   modules = modules || ['highcharts']
