@@ -49,7 +49,6 @@ class App extends React.Component {
           chartOptions={chartOptions}
           className="react-chart-demo"
           style={{ height: 501 }}
-          versions="6.0.2"
           platformType={PlatformType.HCHARTS}
         />
         <button
