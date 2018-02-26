@@ -1,6 +1,6 @@
 import scriptjsLoader from '@sdp.nd/js-async-loader'
 export default function hchartsLoader (versions, modules) {
-  versions = versions || '6.0.2'
+  versions = versions || '6.0.7'
   modules = modules || ['highcharts']
   if (!modules.includes('js/modules/oldie') && navigator.userAgent.indexOf('MSIE 8.0') > 0) {
     modules.push('js/modules/oldie')
