@@ -37,7 +37,8 @@ export default class NDCharts extends Component {
     this.container = container
   }
   createComponentInstance (NDChart, chartOptions) {
-    return new NDChart.chart(this.container, chartOptions)
+    const Chart = NDChart.chart
+    return new Chart(this.container, chartOptions)
   }
 
   componentDidMount () {

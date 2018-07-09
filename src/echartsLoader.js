@@ -14,7 +14,7 @@ export default function echartsLoader (versions, modules) {
     .then(echartsSDK => {
       // 补充echart缺少的初始化方法
       echartsSDK.chart = (dom, options) => {
-        let chart = echartsSDK.init(dom)
+        const chart = echartsSDK.init(dom)
         chart.setOption(options)
         return chart
       }
