@@ -2,7 +2,7 @@
 
 ---
 
-基于多种报图平台（[echarts](http://echarts.baidu.com/)，[highcharts](https://www.hcharts.cn/) ）Javascript API 的报图组件
+基于多种报图平台（[echarts](http://echarts.baidu.com/)等）Javascript API 的报图组件
 
 ## 浏览器支持
 
