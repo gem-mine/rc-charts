@@ -1,23 +1,20 @@
 import scriptjsLoader from '@sdp.nd/js-async-loader'
-export default function echartsLoader (versions, modules) {
+export default async function echartsLoader (versions, modules) {
+  const uri = `//cdn.bootcss.com/echarts/:versions/:moduleName.js`
   versions = versions || '4.0.2'
   modules = modules || ['echarts.min']
-  return modules
-    .reduce((previousValue, currentValue) => {
-      return previousValue.then(() =>
-        scriptjsLoader(`//cdn.bootcss.com/echarts/:versions/:moduleName.js`, 'echarts', {
-          versions,
-          moduleName: currentValue
-        })
-      )
-    }, Promise.resolve({}))
-    .then(echartsSDK => {
-      // 补充echart缺少的初始化方法
-      echartsSDK.chart = (dom, options) => {
-        const chart = echartsSDK.init(dom)
-        chart.setOption(options)
-        return chart
-      }
-      return echartsSDK
+  for (let i = 0; i < modules.length; i++) {
+    await scriptjsLoader(uri, null, {
+      versions,
+      moduleName: modules[i]
     })
+  }
+  // 补充echart缺少的初始化方法
+  const echartsSDK = window.echarts
+  echartsSDK.chart = (dom, options) => {
+    const chart = echartsSDK.init(dom)
+    chart.setOption(options)
+    return chart
+  }
+  return echartsSDK
 }
