@@ -22,7 +22,7 @@
     "lib"
   ],
   "dependencies": {
-    "@sdp.nd/js-async-loader": "^2.0.0"
+    "@sdp.nd/js-async-loader": "^2.0.1"
   },
   "pre-commit": [
     "lint"
