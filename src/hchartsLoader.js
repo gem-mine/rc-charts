@@ -1,6 +1,6 @@
 import scriptjsLoader from '@sdp.nd/js-async-loader'
 export default async function hchartsLoader (versions, modules) {
-  const uri = `//cdn.bootcss.com/highcharts/:versions/:moduleName.js`
+  const uri = `//cdnjs.cloudflare.com/ajax/libs/highcharts/:versions/:moduleName.js`
   versions = versions || '6.0.7'
   modules = modules || ['highcharts']
   if (!modules.includes('js/modules/oldie') && navigator.userAgent.indexOf('MSIE 8.0') > 0) {

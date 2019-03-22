@@ -1,6 +1,6 @@
 import scriptjsLoader from '@sdp.nd/js-async-loader'
 export default async function echartsLoader (versions, modules) {
-  const uri = `//cdn.bootcss.com/echarts/:versions/:moduleName.js`
+  const uri = `//cdnjs.cloudflare.com/ajax/libs/echarts/:versions/:moduleName.js`
   versions = versions || '4.0.2'
   modules = modules || ['echarts.min']
   for (let i = 0; i < modules.length; i++) {
