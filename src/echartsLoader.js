@@ -2,7 +2,7 @@ import scriptjsLoader from '@sdp.nd/js-async-loader'
 import { echartMap } from './map'
 
 export default async function echartsLoader (versions, modules) {
-  const uri = `//cdnjs.cloudflare.com/ajax/libs/echarts/:versions/:moduleName.js`
+  const uri = `//gcdncs.101.com/v0.1/static/fish/script/echarts//:versions/:moduleName.js`
   versions = versions || '4.0.2'
   versions = echartMap[versions] || echartMap[versions.match(/(?<![.\d])\d+(?=(\.\d+)*\.\d+)/)[0]]
 
