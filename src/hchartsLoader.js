@@ -5,7 +5,7 @@ export default async function hchartsLoader (versions, modules) {
   const uri = `//gcdncs.101.com/v0.1/static/fish/highcharts/:versions/:moduleName.js`
 
   versions = versions || '6.0.7'
-  versions = hchartMap[versions] || hchartMap[versions.match(/(?<![.\d])\d+(?=(\.\d+)*\.\d+)/)[0]]
+  versions = hchartMap[versions] || hchartMap[versions.match(/\w(?=\.)/)[0]]
 
   modules = modules || ['highcharts']
   if (!modules.includes('js/modules/oldie') && navigator.userAgent.indexOf('MSIE 8.0') > 0) {
