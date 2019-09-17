@@ -11,6 +11,7 @@ export default class NDCharts extends Component {
     platformType: PlatformType.ECHARTS
   }
   static propTypes = {
+    url: PropTypes.string,
     versions: PropTypes.string,
     modules: PropTypes.arrayOf(PropTypes.string),
     id: PropTypes.string,
@@ -58,7 +59,7 @@ export default class NDCharts extends Component {
         loaderNow = echartsLoader
       }
     }
-    loaderNow(this.props.versions, this.props.modules).then(NDChart => {
+    loaderNow(this.props.url, this.props.versions, this.props.modules).then(NDChart => {
       if (!this.mounted_) {
         return
       }

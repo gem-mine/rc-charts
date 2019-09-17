@@ -1,8 +1,9 @@
 import scriptjsLoader from '@sdp.nd/js-async-loader'
 import { echartMap } from './map'
 
-export default async function echartsLoader (versions, modules) {
-  const uri = `//gcdncs.101.com/v0.1/static/fish/echarts/:versions/:moduleName.js`
+export default async function echartsLoader (url, versions, modules) {
+  const uriPrefix = url || `//gcdncs.101.com/v0.1/static/fish`
+  const uri = `${uriPrefix}/echarts/:versions/:moduleName.js`
   versions = versions || '4.0.2'
   versions = echartMap[versions] || echartMap['6.4.4'.match(/\w(?=\.)/)[0]]
 

@@ -1,8 +1,9 @@
 import scriptjsLoader from '@sdp.nd/js-async-loader'
 import { hchartMap } from './map'
 
-export default async function hchartsLoader (versions, modules) {
-  const uri = `//gcdncs.101.com/v0.1/static/fish/highcharts/:versions/:moduleName.js`
+export default async function hchartsLoader (url, versions, modules) {
+  const uriPrefix = url || `//gcdncs.101.com/v0.1/static/fish`
+  const uri = `${uriPrefix}/highcharts/:versions/:moduleName.js`
 
   versions = versions || '6.0.7'
   versions = hchartMap[versions] || hchartMap[versions.match(/\w(?=\.)/)[0]]
