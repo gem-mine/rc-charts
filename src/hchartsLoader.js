@@ -1,7 +1,13 @@
 import scriptjsLoader from '@sdp.nd/js-async-loader'
-export default async function hchartsLoader (versions, modules) {
-  const uri = `//cdnjs.cloudflare.com/ajax/libs/highcharts/:versions/:moduleName.js`
+import { hchartMap } from './map'
+
+export default async function hchartsLoader (url, versions, modules) {
+  const uriPrefix = url || `//gcdncs.101.com/v0.1/static/fish`
+  const uri = `${uriPrefix}/highcharts/:versions/:moduleName.js`
+
   versions = versions || '6.0.7'
+  versions = hchartMap[versions] || hchartMap[versions.match(/\w(?=\.)/)[0]]
+
   modules = modules || ['highcharts']
   if (!modules.includes('js/modules/oldie') && navigator.userAgent.indexOf('MSIE 8.0') > 0) {
     modules.push('js/modules/oldie')

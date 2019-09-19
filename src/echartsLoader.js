@@ -1,7 +1,12 @@
 import scriptjsLoader from '@sdp.nd/js-async-loader'
-export default async function echartsLoader (versions, modules) {
-  const uri = `//cdnjs.cloudflare.com/ajax/libs/echarts/:versions/:moduleName.js`
+import { echartMap } from './map'
+
+export default async function echartsLoader (url, versions, modules) {
+  const uriPrefix = url || `//gcdncs.101.com/v0.1/static/fish`
+  const uri = `${uriPrefix}/echarts/:versions/:moduleName.js`
   versions = versions || '4.0.2'
+  versions = echartMap[versions] || echartMap[versions.match(/\w(?=\.)/)[0]]
+
   modules = modules || ['echarts.min']
   for (let i = 0; i < modules.length; i++) {
     await scriptjsLoader(uri, null, {
