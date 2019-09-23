@@ -6,7 +6,7 @@ const PlatformType = {
   ECHARTS: 'echarts',
   HCHARTS: 'hcharts'
 }
-export default class NDCharts extends Component {
+export default class RcCharts extends Component {
   static defaultProps = {
     platformType: PlatformType.ECHARTS
   }
@@ -24,22 +24,22 @@ export default class NDCharts extends Component {
   }
   static childContextTypes = {
     chartInstance: PropTypes.object,
-    NDChart: PropTypes.object
+    RcChart: PropTypes.object
   }
   getChildContext () {
     return {
       chartInstance: this.componentInstance,
-      NDChart: this.NDChart
+      RcChart: this.RcChart
     }
   }
   static PlatformType = PlatformType
   componentInstance
-  NDChart
+  RcChart
   bindContainer = container => {
     this.container = container
   }
-  createComponentInstance (NDChart, chartOptions) {
-    const Chart = NDChart.chart
+  createComponentInstance (RcChart, chartOptions) {
+    const Chart = RcChart.chart
     return new Chart(this.container, chartOptions)
   }
 
@@ -59,14 +59,14 @@ export default class NDCharts extends Component {
         loaderNow = echartsLoader
       }
     }
-    loaderNow(this.props.url, this.props.versions, this.props.modules).then(NDChart => {
+    loaderNow(this.props.url, this.props.versions, this.props.modules).then(RcChart => {
       if (!this.mounted_) {
         return
       }
-      this.NDChart = NDChart
-      this.componentInstance = this.createComponentInstance(NDChart, this.props.chartOptions)
+      this.RcChart = RcChart
+      this.componentInstance = this.createComponentInstance(RcChart, this.props.chartOptions)
       if (this.props.setComponentInstance) {
-        this.props.setComponentInstance(this.componentInstance, NDChart)
+        this.props.setComponentInstance(this.componentInstance, RcChart)
       }
       this.forceUpdate() // Re-render now that componentInstance is created
     })

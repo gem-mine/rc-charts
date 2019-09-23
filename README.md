@@ -15,7 +15,7 @@ IE 8+
 ## 安装
 
 ```bash
-npm install @sdp.nd/nd-charts --save
+npm install @gem-mine/rc-charts --save
 ```
 
 ## 运行
@@ -47,11 +47,11 @@ npm run site
 echarts 初始化基础操作
 
 ```jsx
-import NDReactCharts, { PlatformType } from "@sdp.nd/nd-charts";
+import RcReactCharts, { PlatformType } from "@gem-mine/rc-charts";
 
 class App extends React.Component {
   chartInstance;
-  NDChart;
+  RcChart;
   render() {
     const chartOptions = {
       title: {
@@ -75,10 +75,10 @@ class App extends React.Component {
     };
     return (
       <div className="react-chart-container-demo">
-        <NDReactCharts
-          setComponentInstance={(chartInstance, NDChart) => {
+        <RcReactCharts
+          setComponentInstance={(chartInstance, RcChart) => {
             this.chartInstance = chartInstance;
-            this.NDChart = NDChart;
+            this.RcChart = RcChart;
           }}
           url='//cdncs.101.com/v0.1/static/fish'
           chartOptions={chartOptions}
@@ -107,11 +107,11 @@ ReactDOM.render(<App />, mountNode);
 Highcharts 初始化基础操作
 
 ```jsx
-import NDReactCharts, { PlatformType } from "@sdp.nd/nd-charts";
+import RcReactCharts, { PlatformType } from "@gem-mine/rc-charts";
 
 class App extends React.Component {
   chartInstance;
-  NDChart;
+  RcChart;
   render() {
     const chartOptions = {
       chart: {
@@ -142,10 +142,10 @@ class App extends React.Component {
     };
     return (
       <div className="react-chart-container-demo">
-        <NDReactCharts
-          setComponentInstance={(chartInstance, NDChart) => {
+        <RcReactCharts
+          setComponentInstance={(chartInstance, RcChart) => {
             this.chartInstance = chartInstance;
-            this.NDChart = NDChart;
+            this.RcChart = RcChart;
           }}
           modules={["highcharts", "highcharts-more"]}
           chartOptions={chartOptions}
@@ -172,7 +172,7 @@ ReactDOM.render(<App />, mountNode);
 
 | 参数                 | 说明                                                                                                                                                                                                                                                                                 | 类型                             | 默认值                              |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------------- |
-| setComponentInstance | 设置报图实例                                                                                                                                                                                                                                                                         | function(chartInstance, NDChart) | -                                   |
+| setComponentInstance | 设置报图实例                                                                                                                                                                                                                                                                         | function(chartInstance, RcChart) | -                                   |
 | chartOptions         | 报图初始化配置项                                                                                                                                                                                                                                                                     | Object                           | -                                   |
 | platformType         | 报图平台类型：[echats（PlatformType.ECHARTS）](http://echarts.baidu.com/)，[highcharts（PlatformType.HCHARTS）](https://www.hcharts.cn/)                                                                                                                                           | PlatformType                     | PlatformType.ECHARTS                |
 | versions             | 版本号。[echarts 的 cdn](http://www.bootcdn.cn/echarts/)；[highcharts 的 cdn](http://www.bootcdn.cn/highcharts/)                                                                                                                                                                     | string                           | echarts:'4.0.2'；highcharts:'6.0.2' |

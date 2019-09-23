@@ -1,4 +1,4 @@
-import scriptjsLoader from '@sdp.nd/js-async-loader'
+import scriptjsLoader from '@gem-mine/js-async-loader'
 import { echartMap } from './map'
 
 export default async function echartsLoader (url, versions, modules) {

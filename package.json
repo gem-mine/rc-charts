@@ -1,5 +1,5 @@
 {
-  "name": "@sdp.nd/nd-charts",
+  "name": "@gem-mine/rc-charts",
   "version": "2.1.0",
   "description": "通用报图组件",
   "license": "MIT",
@@ -22,7 +22,7 @@
     "lib"
   ],
   "dependencies": {
-    "@sdp.nd/js-async-loader": "^2.0.1",
+    "@gem-mine/js-async-loader": "^2.0.1",
     "prop-types": "^15.6.2"
   },
   "pre-commit": [

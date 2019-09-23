@@ -1,4 +1,4 @@
-import scriptjsLoader from '@sdp.nd/js-async-loader'
+import scriptjsLoader from '@gem-mine/js-async-loader'
 import { hchartMap } from './map'
 
 export default async function hchartsLoader (url, versions, modules) {
