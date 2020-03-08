@@ -30,7 +30,7 @@
 
 `2018-10-15`
 
-* 升级依赖@sdp.nd/js-async-loader
+* 升级依赖@gem-mine/js-async-loader
 * 构建使用md-tools代替bisheng
 
 ## 1.0.1
@@ -43,4 +43,4 @@
 
 `2018-02-23`
 
-* [项目源码](http://git.sdp.nd/component-h5/nd-charts), 兼容 IE8 的通用报图组件
+* [项目源码](https://github.com/gem-mine/rc-charts), 兼容 IE8 的通用报图组件
