@@ -2,7 +2,7 @@ import scriptjsLoader from '@gem-mine/js-async-loader'
 import { hchartMap } from './map'
 
 export default async function hchartsLoader (url, versions, modules) {
-  const uriPrefix = url || `//gcdncs.101.com/v0.1/static/fish`
+  const uriPrefix = url || `//gcdncs.101.com/v0.1/static/share/fish`
   const uri = `${uriPrefix}/highcharts/:versions/:moduleName.js`
 
   versions = versions || '6.0.7'

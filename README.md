@@ -80,7 +80,7 @@ class App extends React.Component {
             this.chartInstance = chartInstance;
             this.RcChart = RcChart;
           }}
-          url='//cdncs.101.com/v0.1/static/fish'
+          versions="5.1.0"
           chartOptions={chartOptions}
           className="react-chart-demo"
         />
